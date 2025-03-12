@@ -1,4 +1,14 @@
 # TensoRF
+## Project from EA course of Ecole Polytechnique
+The idea was to study the concept of NeRF. Upon testing it, we found that the training time was excessively long, so we found papers to reduce it, namely [TensoRF: Tensorial Radiance Fields](https://arxiv.org/abs/2203.09517)
+
+Upon seeing it, we sought ways to build upon the model and thought of testing a new tensor decomposition to the algorithm. We used Tucker Decomposition.
+
+The big changes to the code were made to the file models/TensoRF.py, by creating a new class TensorTucker, with relevant attributes and methods. 
+
+The only dataset that was tested was the lego one. The config should already be set to use TensorTucker. But for other scene, the user should change the config by choosing TensorTucker for the model, and the parameters to [low_number] for both density and appearance. 
+
+
 ## [Project page](https://apchenstu.github.io/TensoRF/) |  [Paper](https://arxiv.org/abs/2203.09517)
 This repository contains a pytorch implementation for the paper: [TensoRF: Tensorial Radiance Fields](https://arxiv.org/abs/2203.09517). Our work present a novel approach to model and reconstruct radiance fields, which achieves super
 **fast** training process, **compact** memory footprint and **state-of-the-art** rendering quality.<br><br>
